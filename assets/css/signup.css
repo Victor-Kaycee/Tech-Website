@@ -1,0 +1,286 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Boldonse&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Outfit:wght@100..900&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+  --header-height: 3.5rem;
+
+  /*========== Colors ==========*/
+  /*Color mode HSL(hue, saturation, lightness)*/
+  --first-color: #13131B;
+  --first-color-light: #b3abab;
+  --text-light: #e1e0e6;
+  --bg-light: rgb(214, 213, 218, .3);
+  --bg-color: #0d0a24;
+  --text-color: #13131B;
+  --white-color: #f8f9fa;
+  --text-color-light: hsl(203, 8%, 80%);
+
+  /*========== Font and typography ==========*/
+  /*.5rem = 8px | 1rem = 16px ...*/
+  --body-font:"Outfit", serif;
+  --header-font: "Syne", sans-serif;
+  --biggest-font-size: 2.25rem;
+  --h2-font-size: 1.25rem;
+  --normal-font-size: .938rem;
+  --smaller-font-size: .75rem;
+
+  /*========== Font weight ==========*/
+  --font-semi-bold: 600;
+
+  /*========== z index ==========*/
+  --z-fixed: 100;
+}
+
+/* Responsive typography */
+@media screen and (min-width: 1024px) {
+  :root {
+    --biggest-font-size: 4rem;
+    --h2-font-size: 1.5rem;
+    --normal-font-size: 1rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+/*=============== BASE ===============*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4 {
+  color: var(--black-color);
+}
+
+p,span {
+  font-family: var(--body-font);
+  font-size: 15px;
+  font-weight: 300
+}
+
+body {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  background-color: var(--white-color);
+  color: var(--text-color);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: var(--body-font);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+  max-width: 1124px;
+  margin-inline: 1.5rem;
+}
+
+.main {
+  overflow: hidden; /* For the animations */
+}
+
+
+.login {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.login-grid {
+  display: flex;
+}
+
+.login-background  {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.4) 30%, rgb(0, 0, 0, .4) 70%), url(../img/sign-up-2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  flex: 3;
+}
+
+.login-form {
+  flex: 1;
+  padding: 2rem 0 2rem;
+}
+
+.form-logo {
+  /* text-align: center; */
+  padding-bottom: 30px;
+}
+
+.form-logo h3  {
+  font-size: 50px;
+  font-family: var(--header-font);
+  color: var(--text-color);
+  text-align: center;
+}
+
+
+.input-div {
+  border-bottom: 1px solid #666;
+  padding: 20px 0;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  height: 100%;
+}
+
+.input-div input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  background: var(--white-color);
+}
+
+.input-div input::placeholder {
+  color: var(--text-color-light);
+  font-family: var(--body-font);
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.agree {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.agree a {
+  color: var(--first-color);
+  text-decoration: underline;
+}
+
+.sign-in {
+  background: var(--first-color);
+  font-family: var(--body-font);
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.sign-up {
+  text-align: center;
+}
+
+.sign-up span {
+  color: var(--text-color);
+}
+
+.sign-up a {
+  color: var(--first-color);
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .login {
+    overflow: scroll;
+  }  
+
+  .login-grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.input-div {
+  border-bottom: 1px solid #666;
+  padding: 20px 0;
+  position: relative;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  height: 100%;
+}
+
+.input-div input {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  background: var(--white-color);
+}
+
+.input-div input::placeholder {
+  color: var(--text-color-light);
+  font-family: var(--body-font);
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.agree {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.agree a {
+  color: var(--first-color);
+  text-decoration: underline;
+}
+
+.sign-in {
+  background: var(--first-color);
+  font-family: var(--body-font);
+  color: var(--white-color);
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 12px 0;
+  margin-bottom: 30px;
+  border-radius: 5px;
+}
+
+.sign-up {
+  text-align: center;
+}
+
+.sign-up span {
+  color: var(--text-color);
+}
+
+.sign-up a {
+  color: var(--first-color);
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .login {
+    overflow: scroll;
+  }  
+
+  .login-grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
