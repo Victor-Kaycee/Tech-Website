@@ -50,37 +50,62 @@ ScrollReveal({
 
 ScrollReveal().reveal(".about-grid h1", { origin: 'left', duration: '2000'})
 ScrollReveal().reveal(".about-grid img, .build-link", { origin: 'bottom', duration: '2000'})
-ScrollReveal().reveal(".about-grid-2 img, .services-header h1, .grid-2-div, .learn-img, .feedback-header h1, .blog-header h1", { origin: 'top', duration: '1000'})
+ScrollReveal().reveal(".about-grid-2 img, .services-header h1, .grid-2-div, .feedback-header h1, .blog-header h1", { origin: 'top', duration: '1000'})
 ScrollReveal().reveal(".about-grid-2 p", { origin: 'right', duration: '2000'})
-ScrollReveal().reveal(".f-1, .grid-1-div, .g-7, .build-header h1, .learn-grid-content h1", { origin: 'right', duration: '2000'})
+ScrollReveal().reveal(".f-1, .grid-1-div, .g-7, .build-header h1, .learn-header-content h1", { origin: 'right', duration: '2000'})
 ScrollReveal().reveal(".f-2, .services-header p, .feedback-header p, .blog-header p", { origin: 'bottom', duration: '2000'})
-ScrollReveal().reveal(".f-3, .grid-1-div-2, .g-6, .build-header p, .learn-grid-content p", { origin: 'left', duration: '2000'})
+ScrollReveal().reveal(".f-3, .grid-1-div-2, .g-6, .build-header p, .learn-header-content p", { origin: 'left', duration: '2000'})
 ScrollReveal().reveal(".feedbacks-grid p", { scale: 0.8, origin: 'top', duration: '2000'})
-ScrollReveal().reveal(".feedback-img", { scale: 0.8, origin: 'bottom', duration: '2000'})
 ScrollReveal().reveal(".bg-1", { scale: 0.8, origin: 'right', duration: '2000'})
 ScrollReveal().reveal(".bg-2", { scale: 0.8, origin: 'left', duration: '2000'})
 ScrollReveal().reveal(".bg-3", { scale: 0.8, origin: 'bottom', duration: '2000'})
 
-// $('').owlCarousel({
-//   autoplay:true,
-//   slideSpeed:1000,
-//   items:1,
-//   loop:true,
-//   nav:false,
-//   margin:30,
-//   dots:true,
-//   responsive:{
-//     320:{
-//       items:1
-//     },
-//     767:{
-//       items:2
-//     },
-//     600:{
-//       items:2
-//     },
-//     1000:{
-//       items:1
-//     }
-//   }
-// });
+
+$('.learn-grid-1').owlCarousel({
+  autoplay:true,
+  slideSpeed:3000,
+  items:1,
+  loop:true,
+  nav:false,
+  margin:30,
+  dots:true,
+  responsive:{
+    320:{
+      items:1
+    },
+    767:{
+      items:1
+    },
+    600:{
+      items:1
+    },
+    1000:{
+      items:1
+    }
+  }
+});
+
+
+$('.feedback-grid-1').owlCarousel({
+  autoplay:true,
+  slideSpeed:1000,
+  items:1,
+  loop:true,
+  nav:false,
+  margin:30,
+  dots:true,
+  responsive:{
+    320:{
+      items:1
+    },
+    767:{
+      items:1
+    },
+    600:{
+      items:1
+    },
+    1000:{
+      items:1
+    }
+  }
+});
